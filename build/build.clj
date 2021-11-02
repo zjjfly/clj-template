@@ -19,7 +19,8 @@
 (defn java-file-exist?
   [dir]
   (let [files (file-seq (io/file dir))]
-    (some #(s/ends-with? (.getName %) ".java") files)))
+    (some #(s/ends-with? (.getName %) ".java")
+          (filter #(.isFile %) files))))
 
 (defn clean
   "Delete the build target directory"
