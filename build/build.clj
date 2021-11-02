@@ -2,8 +2,7 @@
   (:require [clojure.tools.build.api :as b]
             [clojure.java.io :as io]
             [clojure.string :as s]
-            )
-  (:import (java.io File)))
+            ))
 
 (def lib ::clj-template)
 ;(def version (format "1.2.%s" (b/git-count-revs nil)))
