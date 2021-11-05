@@ -68,7 +68,7 @@
                   :src-dirs  [clj-source]
                   :class-dir class-dir}))
 
-(defn compile
+(defn compile-all
   "compile all source files"
   [_]
   (compile-java _)
@@ -78,7 +78,7 @@
   "package jar file"
   (clean _)
   (prep _)
-  (compile _)
+  (compile-all _)
   (b/jar {:class-dir class-dir
           :jar-file  jar-file
           :main      nil}))
@@ -88,7 +88,7 @@
   [_]
   (clean _)
   (prep _)
-  (compile _)
+  (compile-all _)
   (b/uber {:class-dir class-dir
            :uber-file uber-file
            :basis     basis}))
