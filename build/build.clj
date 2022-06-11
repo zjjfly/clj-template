@@ -1,7 +1,7 @@
 (ns build
-  (:require [clojure.tools.build.api :as b]
-            [clojure.java.io :as io]
-            [clojure.string :as s])
+  (:require [clojure.java.io :as io]
+            [clojure.string :as s]
+            [clojure.tools.build.api :as b])
   (:import (java.io File)))
 
 (def lib ::clj-template)
