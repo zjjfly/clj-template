@@ -41,8 +41,9 @@
   (println (str "Cleaning " target-dir))
   (b/delete {:path target-dir}))
 
-(defn prep [_]
+(defn prep
   "prepare for building"
+  [_]
   (init _)
   (b/write-pom {:class-dir class-dir
                 :lib       lib
@@ -74,8 +75,9 @@
   (compile-java _)
   (compile-clj _))
 
-(defn jar [_]
+(defn jar
   "package jar file"
+  [_]
   (clean _)
   (prep _)
   (compile-all _)
